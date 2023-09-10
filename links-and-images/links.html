@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Links</title>
+    </head>
+    <body>
+        <h1>Links</h1>
+<!--Los links se crean con el elemento <a>, que significa anchor. 
+    Attributes add meaning to the elements, which also add meaning to the content it contains. -->
+        <p>This example is about links and <a href="images.html">images</a>.</p>
+
+        <p>This particular page is about links! There are three kinds of links:</p>
+
+        <ul>
+            <!--Los Absolute links son la manera más detallada de referenciar un web resource. Es
+            recomendable usarlo solo para indicar a users que vayan a otra página web. El target añade un
+            valor más al elemento, por ejemplo, puede indicar a dónde llevarte al hacer click en el link indicado.
+            En este caso, hemos indicado que el link se abra en una página nueva. -->
+            <li>Absolute links, like to
+                <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">Mozilla Developer Network</a>,
+                which is a very good resource for web developers.</li>
+
+            <!--Los relatives te llevan a otro file dentro de tu web. It's implied that the scheme and domain
+            (https:// y el dominio de la web) are the same as the current page, so the only thing you need to
+            supply is the path. Each folder and file in a path is separated by a slash (/)
+            En caso de que la referencia que hagas esté fuera del folder en el que estás trabajando, debes 
+            referenciar para atrás usando ../ Para entender esto mejor, ver el ejemplo en Misc -> extras.html-->
+            <li>Relative links, like to our <a href='misc/extras.html'>extras page</a>.</li>
+
+            <!--Los root relative links se parecen a los relatives, pero en vez de estar relacionado con 
+            nuestra página actual, está relacionado con el root de la web entera. Por ejemplo, si nuestra
+            web tiene el hosting en our-website.com, todos los links que uniremos estarán relacionados con 
+            our-website.com. Para indicar que es un root-relative link, se debe indicar después de href con un / .
+            Después se puede añadir cualquier path.-->
+            <li>Root-relative links, like to the <a href="/">home page</a> of our website, but those aren't useful
+            to us right now.</li>
+        </ul>
+    </body>
+</html>
