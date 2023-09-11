@@ -1,0 +1,32 @@
+body {
+    color: #414141; /*Dark gray*/
+    background-color: #EEEEEE; /*Light gray*/
+    /*Para la letra y el fondo, es recomendable utilizar tonalidades del gris a usar blanco y negro (es un 
+    contraste muy grande). Es más suave para la vista del lector.*/
+    font-size: 18px;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.6em;
+}
+/*Hay dos tipos de medidas en CSS que se usan habitualmente: pixels (px) y em. En este ejemplo, indicamos
+que queremos que la tipografía del body tenga 18px. Al añadir 2em en el h1, indicamos que queremos que 
+el título h1 sea dos veces más grande que el font del body. De la misma manera, el h2 debe ser 1.6 veces
+más grande que el font size. IF the user ever wanted to make the base font bigger or smaller, em units 
+would allow our entire page to scale accordingly.*/
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica", "Arial", sans-serif
+}
+
+ul {
+    list-style-type: circle;
+}
+
+ol {
+    list-style-type: lower-roman;
+}
