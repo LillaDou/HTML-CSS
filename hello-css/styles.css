@@ -20,7 +20,8 @@ más grande que el font size. IF the user ever wanted to make the base font bigg
 would allow our entire page to scale accordingly.*/
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Helvetica", "Arial", sans-serif
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-weight: normal;
 }
 
 ul {
@@ -30,3 +31,25 @@ ul {
 ol {
     list-style-type: lower-roman;
 }
+
+a {
+    text-decoration: none;
+}
+
+p {
+    text-align: left;
+}
+
+/* Este es un external stylesheet. Esto significa que todo lo que hemos añadido aquí se va a
+añadir a la web entera. Si queremos que afecte solo a una página en concreto, los page-specific
+styles, deberemos añadir el css en el head de la página pues es metadata y no contenido como tal.
+
+Es recomendable, para evitar complicaciones en el código más adelante, tener todo el CSS en un 
+documento separado.*/
+
+/* Al añadir el <link/> en una página html para conectarla con los documentos de diseño de CSS, es
+importante tener en cuenta el orden en el que se añade. Es decir, si queremos hacer cambios más especificos, 
+como por ejemplo, que nuestro blog tenga un estilo diferente, es importante primero poner el <link/>
+al que actúa como base o es el estilo default de nuestra web, y después el específico para el blog. 
+Al poner este segundo más tarde, sirve como suplemento de diseño a la base. Ayuda a su vez a evitar utilizar
+page-specific styles e inline styles. */
