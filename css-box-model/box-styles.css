@@ -1,0 +1,32 @@
+h1, p {
+    background-color: #DDE0E3; /*Light gray*/
+}
+
+em, strong {
+    background-color: #B2D6FF; /* Light blue*/
+    display: inline; /* This is the default for em and strong*/
+}
+
+h1 {
+    padding: 50px;
+}
+
+/* p {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+Esto se puede escribir con un "shortcut", donde las dimensiones muestran lo vertical por lo horizontal.
+Como por ejemplo...*/
+
+/* p {
+    padding: 20px 10px;   Vertical, horizontal
+}
+O por el contrario, si queremos poner en una línea de código 4 paddings diferentes al bloque, se pueden
+poner los pixeles de cada uno en el sentido de las agujas del reloj, comenzando por arriba: ...*/
+p {
+    padding: 20px 0 20px 10px;  /*Top, right, bottom, left*/
+}
+
+/* Los tres son formas diferentes de indicar el padding. Podemos usar el que prefiramos nosotros */
