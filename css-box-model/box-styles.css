@@ -9,6 +9,9 @@ em, strong {
 
 h1 {
     padding: 50px;
+     /* para indicar el border, primero se indica el size, luego el size
+    y después el color */
+    border-bottom: 1px solid #5D6063;
 }
 
 /* p {
@@ -27,6 +30,18 @@ O por el contrario, si queremos poner en una línea de código 4 paddings difere
 poner los pixeles de cada uno en el sentido de las agujas del reloj, comenzando por arriba: ...*/
 p {
     padding: 20px 0 20px 10px;  /*Top, right, bottom, left*/
+
+    margin-top: 25px;
+    margin-bottom: 50px; 
 }
 
 /* Los tres son formas diferentes de indicar el padding. Podemos usar el que prefiramos nosotros */
+
+/* El padding y el margin son bastante similares, y en ocasiones es dificil saber cuál es mejor para usar.
+Hay varios detalles a tener en cuenta:
+- el padding de un box tiene fondo, mientras que los margins siempre son transparentes.
+- El padding está incluido dentro de un área que permite hacer click, mientras que el margin no. */
+
+strong {
+    margin: 50px;
+}
