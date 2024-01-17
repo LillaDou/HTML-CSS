@@ -9,9 +9,12 @@ em, strong {
 
 h1 {
     padding: 50px;
-     /* para indicar el border, primero se indica el size, luego el size
+     /* para indicar el border, primero se indica el stroke width, luego el style
     y después el color */
     border-bottom: 1px solid #5D6063;
+    /*Si no sabemos bien cómo se va a ver lo que estamos haciendo, podemos añadir un
+    border: 1px solid red;. Esto va a indicar las dimensiones de lo que estamos haciendo. Una vez 
+    tengamos todo claro, simplemente borramos esa línea de código y listo */
 }
 
 /* p {
@@ -21,9 +24,8 @@ h1 {
     padding-right: 10px;
 }
 Esto se puede escribir con un "shortcut", donde las dimensiones muestran lo vertical por lo horizontal.
-Como por ejemplo...*/
-
-/* p {
+Como por ejemplo...
+p {
     padding: 20px 10px;   Vertical, horizontal
 }
 O por el contrario, si queremos poner en una línea de código 4 paddings diferentes al bloque, se pueden
