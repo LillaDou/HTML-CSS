@@ -1,3 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* los browsers suelen venir con un margin/padding base (default). Para poder resetear esto, se añade
+    este código bajo el * */
+}
+
 h1, p {
     background-color: #DDE0E3; /*Light gray*/
 }
@@ -44,6 +52,20 @@ Hay varios detalles a tener en cuenta:
 - el padding de un box tiene fondo, mientras que los margins siempre son transparentes.
 - El padding está incluido dentro de un área que permite hacer click, mientras que el margin no. */
 
-strong {
-    margin: 50px;
+div {
+    color: #FFF;
+    background-color: #5995DA;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #5D6063;
+    border-radius: 5px;
+
+    width: 200px;
+    box-sizing: border-box; /* best practice for all boxes */
+    margin: 20px auto; /* vertical horizontal*/ /*esto solo funciona cuando tenemos un width definido.*/
+}
+
+body {
+    text-align: center;
 }
