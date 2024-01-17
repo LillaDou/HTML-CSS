@@ -45,11 +45,12 @@ añadir a la web entera. Si queremos que afecte solo a una página en concreto, 
 styles, deberemos añadir el css en el head de la página pues es metadata y no contenido como tal.
 
 Es recomendable, para evitar complicaciones en el código más adelante, tener todo el CSS en un 
-documento separado.*/
+documento separado. Se pueden tener diferentes documentos .css con estilos diferentes para páginas diferentes,
+por ejemplo, si queremos tener un estilo concreto para un blog o para una página de productos.*/
 
 /* Al añadir el <link/> en una página html para conectarla con los documentos de diseño de CSS, es
 importante tener en cuenta el orden en el que se añade. Es decir, si queremos hacer cambios más especificos, 
 como por ejemplo, que nuestro blog tenga un estilo diferente, es importante primero poner el <link/>
-al que actúa como base o es el estilo default de nuestra web, y después el específico para el blog. 
+al que actúa como base o es el estilo default de nuestra web, y después el .css específico para el blog. 
 Al poner este segundo más tarde, sirve como suplemento de diseño a la base. Ayuda a su vez a evitar utilizar
 page-specific styles e inline styles. */
