@@ -7,27 +7,34 @@
     </head>
     <body>
         <div class="page">
-        <h1>CSS Selectors</h1>
+            <h1>CSS Selectors</h1>
 
-        <p class="synopsis">CSS selectors let you <em>select</em> individual HTML elements in an HTML document.
-        This is <strong>super</strong> useful.</p>
-        <!--Se puede usar cualquier tipo de nombre a la hora de indicar el class en el HTML. El standard
-        es usar minúsculas y los espacios se representan con guiones.-->
+            <p class="synopsis">CSS selectors let you <em>select</em> individual HTML elements in an HTML document.
+            This is <strong>super</strong> useful.</p>
+            <!--Se puede usar cualquier tipo de nombre a la hora de indicar el class en el HTML. El standard
+            es usar minúsculas y los espacios se representan con guiones.-->
 
-        <p>Classes are ridiculously important, since they allow you to select arbitrary boxes in
-            your webpages.</p>
+            <p>Classes are ridiculously important, since they allow you to select arbitrary boxes in
+                your webpages.</p>
 
-        <p>We'll also be talking about links in this example, so here's <a href='https://internetingishard.com'>
-            Interneting is Hard</a> for us to style.</p>
+            <p>We'll also be talking about links in this example, so here's <a href='https://www.serviciodecorreo.es'>
+                Interneting is Hard</a> for us to style.</p>
 
-        <div class="button">Button One</div>
-        <div class="button call-to-action">Button Two</div>
-        <!--Podemos añadir a un div dos classes diferentes. A la hora de especificarlo, están ambos escritos con 
-        un espacio en medio. En el HTML, el order en el que se ponen ambos classes no altera el resultado.
-        Es lo mismo button call-to-action, que call-to-action button.
-        En el CSS, el orden si afecta al producto. Si ponemos el call-to-action después del .button, el 
-        call-to-action overrides el código del button. The last CSS property is always the one that gets
-        applied. -->
+            <a class="button" href="nowhere.html">Button One</a>
+            <a id="button-2" class="button call-to-action" href="nowhere.html">Button Two</a>
+            <!--Podemos añadir a un div dos classes diferentes. A la hora de especificarlo, están ambos escritos con 
+            un espacio en medio. En el HTML, el order en el que se ponen ambos classes no altera el resultado.
+            Es lo mismo button call-to-action, que call-to-action button.
+            En el CSS, el orden si afecta al producto. Si ponemos el call-to-action después del .button, el 
+            call-to-action overrides el código del button. The last CSS property is always the one that gets
+            applied. -->
+
+            <div class="sidebar">
+                <p>If this page has a sidebar...</p>
+                <p>We'd have some problems with pseudo-classes.</p>
+            </div>
+
+            <a href="#button-2">Go to Button Two</a>
         </div>
     </body>
 </html>

@@ -12,7 +12,11 @@ el documento en general*/
 el <em> en el HTML está dentro de la clase de synopsis. Con este código de CSS, podemos cambiar el elemento en 
 concreto sin alterar la synopsis. */
 
-.button {
+.button:link,
+.button:visited {
+    display:block;
+    text-decoration: none;
+
     color: #FFF;
     background-color: #5995DA; /*Blue*/
     font-weight: bold;
@@ -25,12 +29,97 @@ concreto sin alterar la synopsis. */
     margin: 20px auto;
 }
 
-.call-to-action {
+.button:hover,
+.button:visited:hover {
+    color: #FFF;
+    background-color: #76AEED; /* Light blue*/
+}
+
+.button:active,
+.button:visited:active {
+    color: #FFF;
+    background-color: #5995DA; /*Blue*/
+}
+
+
+.call-to-action:link,
+.call-to-action:visited {
     font-style: italic;
     background-color: #EEB75A; /* Yellow*/
+}
+
+.call-to-action:hover,
+.call-to-action:visited:hover {
+    background-color: #F5CF8E; /*Light yellow*/
+}
+
+.call-to-action:active,
+.call-to-action:visited:active {
+    background-color: #EEB75A; /*Yellow*/
 }
 
 .page {
     width: 600px;
     margin: 0 auto;
 }
+
+/* Basic link styles: hay 4 estilos temporales que se usan habitualmente para los links. Estos son el 
+link - cuando el usuario nunca ha ido al link, visited - cuando el usuario ya ha visitado el link,
+hover - cuando el usuario pone el ratón encima del link, active - cuando el usuario presiona el link. */
+
+a:link {
+    color: blue;
+    text-decoration: none;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover {
+    color: aqua;
+    text-decoration: underline;
+}
+
+a:active {
+    color: red;
+}
+
+a:visited:hover {
+    color: orange;
+} /* Esto va a hacer que el al hacer hover encima de los links que ya hemos visitado, que salgan en naranja. 
+Sin embargo, este cambio ha afectado a que ya no veremos el color rojo al hacer click en el link*/
+
+a:visited:active {
+    color: red;
+} /* Este último código ha corregido el problema del hover indicado anteriormente. Importante tener en cuenta
+una vez más el orden en el que se indica el código en el stylesheet */
+
+p:last-of-type {
+    margin-bottom: 50px;
+}
+
+.page > p:first-of-type {
+    color: #7E8184;
+    font-style: italic;
+}
+
+#button-2 {
+    color: #5D6063; /*Dark gray*/
+}
+ /* es mejor siempre usar class selectors en vez de usar IDs. La razón para esto es que no podemos reutilizar 
+ el CSS para otros aspectos de la web porque es especifico a un elemento. 
+ Se recomienda siempre usar classes.*/
+
+ /* IMPORTANTE: ORDEN DE LOS FACTORES
+ Aunque se diga que el orden de los factores altera el producto, esto solo funciona si la especificidad del 
+ elemento es igual. Por ejemplo, si todos los elementos son clases, se ejecuta el último, pero si añadimos 
+ un id al principio o final del código, siempre se ejecutará este por encima del resto. 
+ Hay un orden de especificidad a tener en cuenta, y se ejecutan de la siguiente manera:
+ 1º #button-2 (ID)
+ 2º .button:link
+ 3º a:link y .synopsis em (son iguales)
+ 4º a 
+ 
+ Recomiendan que siempre utilices el mismo estilo de especificidad para evitar problemas con el overriding 
+ de código*/
