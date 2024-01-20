@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+/* Floats lets us stack things horizontally instead of vertically*/
+
 .menu {
     height: 100px;
     background-color: #B2D6FF; /* Medium blue*/
@@ -21,16 +23,37 @@
 }
 
 .content {
+    float: left;
+    width: 650px;
     height: 500px;
     background-color: #F5CF8E; /* Yellow*/
 }
 
 .footer {
+    clear: both;
     height: 200px;
     background-color: #D6E9FE; /* Light blue*/
 }
 
+/* El page nos ayuda a mantener todo centrado en la página*/
 .page {
     width: 900px;
     margin: 0 auto;
 }
+
+/* El container nos ayuda a wrapp todo para tener un full-bleed background color*/
+.container {
+    overflow: hidden;
+    background-color: #EAEDF0;
+}
+
+.column {
+    float: left;
+    width: 31%;
+    margin: 20px 1.15%; 
+    height: 160px;
+    background-color: #B2D6FF; /*Medium Blue */
+}
+/* Los porcentajes son relativos al width/margin del parent element. Ayudan a que los elementos vayan
+cambiando siempre en base al parent element. Por ejemplo, si hacemos la ventana del buscador más pequeña,
+los columns que hemos hecho 'will grow or shrink according to the parent element'. */
