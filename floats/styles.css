@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-/* Floats lets us stack things horizontally instead of vertically*/
+/* Floats lets us stack things horizontally instead of vertically */
 
 .menu {
     height: 100px;
@@ -15,6 +15,7 @@
 - floats left
 - floats right
 - auto-margins for center alignment (Margin: 0 auto) */
+
 .sidebar {
     float: left;
     width: 200px;
@@ -30,8 +31,7 @@
 }
 
 .footer {
-    clear: both;
-    height: 200px;
+    overflow: hidden;
     background-color: #D6E9FE; /* Light blue*/
 }
 
@@ -47,7 +47,7 @@
     background-color: #EAEDF0;
 }
 
-.column {
+.footer-item {
     float: left;
     width: 31%;
     margin: 20px 1.15%; 
@@ -57,3 +57,19 @@
 /* Los porcentajes son relativos al width/margin del parent element. Ayudan a que los elementos vayan
 cambiando siempre en base al parent element. Por ejemplo, si hacemos la ventana del buscador más pequeña,
 los columns que hemos hecho 'will grow or shrink according to the parent element'. */
+
+.content {
+    padding: 20px;
+}
+
+.article-image {
+    float: left;
+    width: 300px;
+    height: 200px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+}
