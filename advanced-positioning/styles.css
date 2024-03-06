@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 1200px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.example {
+    display: flex;
+    justify-content: space-around;
+
+    width: 800px;
+    margin: 50px 0;
+    background-color: #D6E9FE;
+}
+
+.item {
+    display: flex;
+}
+
+.item-relative {
+    position: relative;
+    bottom: 30px;
+    right: 30px;
+}
+/* The relative positioning moves an element around the place where they would normally be in the static
+flow of the page. Nothing is affected by the movement of the element. Everything is rendered as if it were
+in its original position. */
+
+.item-absolute {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+/* The absolute positioning moves an element anywhere in the browser. It is the most manual way to lay
+out an element. While in the relative positioning nothing is affected by the movement of the element, with
+absolute positioning the element is completely removed from the normal flow of the page. It can be seen 
+by the space left between the static boxes. In the relative example it is untouched, while in the absolute
+one it changes. */
+
+.absolute {
+    position: relative;
+}
+/* Añadir el position:relative al absolute ayuda a que el absolute positioning sea más controlado a la hora de
+programar una web. Lo que hace es que el absolute positioning sea relativo al parent element. En este caso, 
+no queremos que el cubo esté en la esquina superior de la web, pero si queremos que se mueva en base a las
+coordenadas que el hemos dado dentro de su parent element. */
+
+.item-fixed {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+/* The fixed positioning is very manual, the element is removed from the normal flow of the page,
+and it is relative to the entire browser window. The difference with the absolute positioning is that 
+the fixed element does not scroll with the rest of the page. It stays there, allowing to put navigation
+bars that always stay on the screen or have a pop up banner that never goes away. */
