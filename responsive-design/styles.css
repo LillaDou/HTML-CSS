@@ -47,6 +47,22 @@
     background-color: #C8C6FA;
 }
 
+.illustration img {
+    width: 100%;
+    display: block;
+}
+
+.header {
+    height: auto;
+    justify-content: inherit; /* Significa que cogerá el atributo que tenga el parent box */
+    align-items: inherit;
+}
+
+.photo img {
+    width: 100%;
+    display: block;
+}
+
 /* Mobile Styles - tiene un fluid layout*/
 @media only screen and (max-width: 600px) {
     body {

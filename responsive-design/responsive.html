@@ -15,12 +15,56 @@
         <div class=" page">
             <div class="section menu"></div>
             <div class="section header">
-                <img src="images/header.svg"/>
+                <div class="photo">
+                    <picture>
+                        <source media="(min-width: 601px)"
+                            srcset="images/photo-big.jpg"/>
+                        <source media="(max-width: 600px)"
+                            srcset="images/photo-tall.jpg"/>
+                        <img src="images/photo-tall.jpg"/>
+                    </picture>
+                </div>
             </div>
+        <!-- In each source, the media attribute defines when the image should be loaded, and srcset defines which
+        image file should be loaded. The img element is only used as a fallback for older browsers. 
+        The negative side of this is that we loose our retina optimization (see bellow). This means that as long
+        as the screen width is 601+, the browser will always use the high resolution photo. -->
+
+        <!--    <div class="section header">
+                <div class="photo">
+                    <img src="images/photo-small.jpg"
+                        srcset="images/photo-big.jpg 2000w,
+                                images/photo-small.jpg 1000w"
+                        sizes="(min-width: 960px) 960px, 100vw"/>
+                </div>
+            </div>
+        The 2000w tells the browser that the image is 2000 pixels wide, while the 1000w indicates the smaller
+        image is 1000 pixels wide. The w is a special character used only for this image optimization scenario. 
+        We also need to tell it what the final rendered width of the image will be. For this we use the sizes
+        attribute, which defines a series of media queries along with the image's rendered width when that media
+        query is in effect. In this case, it says that when the screen is at least 960px wide, the image will also 
+        be 960px. Otherwise, the 100vw value tells the browser that the image's width will be 100% of the screen
+        width.
+        It is recommended to use this version of image optimisation.-->
+
+        <!-- <div class="section content">
+                <img class="illustration" src="images/illustration.svg" style="max-width: 500px"/>
+             We can put an inline style here because we are describing an innate property of the image.
+            An image's physical dimensions are more content than presentation.
+            </div> -->
 
             <div class="section content">
-                <img src="images/content.svg"/>
+                <div class="illustration">
+                    <img src="illustration-small.png"
+                        srcset="images/illustration-small.png 1x,
+                                images/illustration-big.png 2x" 
+                        style="max-width: 500px"/>
+                </div>
             </div>
+        <!--The srcset points to a list of alternative files, along with properties defining when the browser
+        should use each of them. It lets us present our high resolution image ONLY to retina devices and the low
+        resolution one for standard devices. 1x means standard resolution screens, while 2x means retina screens.
+        Old browses that don't understand the srcset will fall back to the src attribute. -->
 
             <div class="section sign-up">
                 <img src="images/sign-up.svg"/>
