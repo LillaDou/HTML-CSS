@@ -4,8 +4,33 @@
   box-sizing: border-box;
 }
 
+/* El @font-face solo nos da acceso a nuestro font. Pero no se aplica ningún cambio a la web */
+@font-face {
+  font-family: "Roboto"; /* Esto es un label con el que haremos referencia más adelante. Puede ser
+  cualquier cosa que queramos. No hace falta que sea el nombre oficial del font, pero es más intuitivo si
+  es el nombre del font que usamos. It's best if it is as generic as possible.*/
+  src: url("Roboto-Light-webfont.woff") format("woff");
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("Roboto-LightItalic-webfont.woff") format("woff");
+  font-style: italic;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("Roboto-Bold-webfont.woff") format("woff");
+  font-style: normal;
+  font-weight: 700;
+}
+
 body {
-  font-family: sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
   font-size: 18px;
   line-height: 1.8em;
   color: #5D6063;
@@ -24,9 +49,22 @@ header {
   color: #FFF;
 }
 
+em, strong {
+  font-synthesis: none;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold; /* Or 700 */
+}
+
 nav {
   background-color: #54575A;
 }
+
 
 nav ul {
   display: flex;
